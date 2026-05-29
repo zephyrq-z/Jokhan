@@ -2,7 +2,7 @@
 
 基于麻将元素的 Roguelike 卡牌构筑游戏，核心玩法借鉴《Balatro（小丑牌）》的倍率叠加+闯关循环。
 
-![游戏UI素材](/docs/icons.png)
+<img src="/docs/icons.png" alt="游戏UI素材" width="480" />
 
 ## 核心对标
 
