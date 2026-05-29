@@ -1,0 +1,51 @@
+{
+  "name": "jokhan",
+  "version": "1.0.0",
+  "description": "雀胡弈 — 基于麻将元素的 Roguelike 卡牌构筑游戏",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pack:mac": "npm run build && electron-builder --mac",
+    "pack:win": "npm run build && electron-builder --win",
+    "pack:all": "npm run build && electron-builder --mac --win"
+  },
+  "keywords": ["mahjong", "roguelike", "card-game", "balatro-like"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-electron": "^0.28.8",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  },
+  "build": {
+    "appId": "com.jokhan.app",
+    "productName": "雀胡弈",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.card-games",
+      "target": ["dmg"],
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
